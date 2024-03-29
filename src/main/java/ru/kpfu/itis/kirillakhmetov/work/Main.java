@@ -29,7 +29,7 @@ public class Main {
 
     public static void generateOutputData() throws IOException {
         FileReader fileReader = new FileReader("InputData.txt");
-        FileWriter fileWriter = new FileWriter("OutputDataNew.txt", false);
+        FileWriter fileWriter = new FileWriter("OutputData.txt", false);
         Scanner scanner = new Scanner(fileReader);
         long timeStart;
         long timeEnd;
@@ -48,11 +48,11 @@ public class Main {
                     .replace("\n", "")
                     .split(" ");
 
+            timeStart = System.nanoTime();
             for (String str : line) {
                 tree.add(Integer.parseInt(str));
             }
 
-            timeStart = System.nanoTime();
             tree.sort();
             timeEnd = System.nanoTime();
 
