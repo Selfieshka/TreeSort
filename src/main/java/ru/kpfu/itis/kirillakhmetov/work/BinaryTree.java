@@ -39,7 +39,7 @@ public class BinaryTree {
                         flag = false;
                     }
                 } else {
-                    throw new DuplicateElementException();
+                    return ;
                 }
             }
         }

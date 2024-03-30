@@ -57,14 +57,4 @@ public class BinaryTreeTest {
         Assertions.assertThrows(NullPointerException.class, () -> tree.add(null));
     }
 
-    @Test
-    void testDuplicateElementException() {
-        BinaryTree tree = new BinaryTree();
-        tree.add(5);
-        tree.add(7);
-        tree.add(13);
-        tree.add(1);
-        tree.add(4);
-        Assertions.assertThrows(DuplicateElementException.class, () -> tree.add(5));
-    }
 }
